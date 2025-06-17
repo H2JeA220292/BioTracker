@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Tela centralizada compacta com logo e botões elegantes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: #f7faff;
+    }
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', Arial, sans-serif;
+    }
+    .center-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #ffffffcc;
+      padding: 280px 160px;          /* Menor padding */
+      border-radius: 18px;
+      box-shadow: 0 4px 18px rgba(55,80,130,0.10);
+      border: 1px solid #f3f4fb;
+      min-width: 230px;            /* Menor largura mínima */
+      max-width: 90vw;             /* Mais compacto */
+    }
+    .logo {
+      width: 580px;                 /* Logo menor */
+      margin-bottom: 16px;         /* Menos espaço abaixo do logo */
+      user-select: none;
+      opacity: 0.95;
+      filter: grayscale(8%) brightness(1.03);
+    }
+    .button-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 12px;                   /* Menor espaçamento entre os botões */
+      width: 100%;
+    }
+    .button-row button {
+      flex: 1;
+      min-width: 82px;             /* Botão menor */
+      max-width: 120px;            /* Limite máximo menor */
+      height: 36px;                /* Altura menor */
+      padding: 0 12px;             /* Menor padding interno */
+      font-size: 15px;             /* Letra um pouco menor */
+      font-weight: 500;
+      font-family: inherit;
+      color: #4662b0;
+      background: linear-gradient(90deg, #e3ebfa 0%, #f8fafb 100%);
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+      box-shadow: 0 1.5px 6px rgba(120,130,180,0.07);
+      transition: background 0.14s, color 0.14s, transform 0.10s, box-shadow 0.09s;
+      letter-spacing: 0.02em;
+      outline: none;
+    }
+    .button-row button:hover, .button-row button:focus {
+      background: linear-gradient(90deg, #d5e2fa 0%, #eef3f7 100%);
+      color: #26355a;
+      box-shadow: 0 6px 16px rgba(50,84,180,0.11);
+      transform: translateY(-1px) scale(1.03);
+    }
+    @media (max-width: 480px) {
+      .center-box {
+        padding: 14px 4vw;
+      }
+      .button-row {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+      }
+      .button-row button {
+        max-width: 100%;
+      }
+      .logo {
+        width: 48px;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="center-box">
+    <img src="logo.png" alt="Logo" class="logo">
+    <div class="button-row">
+        <button id="btn-samples">SΔMPLES</button>
+        <button>QUALiTY</button>
+        <button>STΦCK</button>
+        <button>TЄSTS</button>
+    </div>
+  </div>
+  <script>
+    // Abre paciente.html ao clicar no botão SΔMPLES
+    document.getElementById('btn-samples').addEventListener('click', function() {
+      window.location.href = 'paciente.html';
+    });
+  </script>
+</body>
+</html>
